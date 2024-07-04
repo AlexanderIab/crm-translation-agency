@@ -1,7 +1,7 @@
 package com.iablonski.crm.domain.individual;
 
 import com.iablonski.crm.domain.user.Role;
-import com.iablonski.crm.domain.user.User;
+import com.iablonski.crm.domain.user.AbstractUser;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +12,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "individuals")
 @NoArgsConstructor
-public class Individual extends User {
+public class Individual extends AbstractUser {
     @Column(nullable = false)
     private String firstName;
     @Column(nullable = false)

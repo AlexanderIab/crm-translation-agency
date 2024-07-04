@@ -2,15 +2,19 @@ package com.iablonski.crm.domain.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @MappedSuperclass
-public abstract class User {
+public abstract class AbstractUser {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -23,6 +27,4 @@ public abstract class User {
     private Role role;
     @Column(name = "registered_date")
     private LocalDateTime registeredDate;
-    @Column(name = "statistic_id")
-    private UUID statisticId;
 }

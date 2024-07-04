@@ -1,7 +1,7 @@
 package com.iablonski.crm.domain.employee;
 
 import com.iablonski.crm.domain.user.Role;
-import com.iablonski.crm.domain.user.User;
+import com.iablonski.crm.domain.user.AbstractUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -13,7 +13,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "employees")
 @NoArgsConstructor
-public class Employee extends User {
+public class Employee extends AbstractUser {
     @Column(nullable = false)
     private String firstName;
     @Column(nullable = false)

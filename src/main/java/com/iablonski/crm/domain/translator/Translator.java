@@ -1,7 +1,7 @@
 package com.iablonski.crm.domain.translator;
 
 import com.iablonski.crm.domain.user.Role;
-import com.iablonski.crm.domain.user.User;
+import com.iablonski.crm.domain.user.AbstractUser;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "translators")
 @NoArgsConstructor
-public class Translator extends User {
+public class Translator extends AbstractUser {
     private String firstName;
     private String lastName;
     private List <UUID> languagesIds;
